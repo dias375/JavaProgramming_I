@@ -5,6 +5,16 @@ public class NumberOfStrings {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int words = 0;
+
+        while (true) {
+            String word = scanner.nextLine();
+            if (word.equals("end")) {
+                break;
+            }
+            words++;
+        }
+        System.out.println(words);
 
     }
 }

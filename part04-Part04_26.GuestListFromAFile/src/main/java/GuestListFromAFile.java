@@ -1,11 +1,12 @@
 
+import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GuestListFromAFile {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Name of the file:");
@@ -13,6 +14,14 @@ public class GuestListFromAFile {
 
         ArrayList<String> list = new ArrayList<>();
         // implement reading the file here.
+
+        try (Scanner scanFile = new Scanner(Paths.get(file))) {
+            while (scanFile.hasNextLine()) {
+                String name = scanFile.nextLine();
+                list.add(name);
+            }
+        }
+
         System.out.println("");
 
         System.out.println("Enter names, an empty line quits.");
