@@ -17,4 +17,18 @@ public class Book {
         return publicationYear;
     }
 
+    @Override
+    public boolean equals(Object compared) {
+
+        Book comparedBook = (Book) compared;
+        if (this.toString().equals(comparedBook.toString())) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return (this.name + " " + this.publicationYear);
+    }
 }
