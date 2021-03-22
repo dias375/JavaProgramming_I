@@ -12,16 +12,24 @@ import java.util.ArrayList;
  */
 public class MessagingService {
 
-    private Message message;
+    //private Message message;
+    private ArrayList<Message> messages;
 
     public MessagingService() {
+        this.messages = new ArrayList<Message>();
     }
 
     public void add(Message message) {
+        String messageContent = message.getContent();
+        int charactersLong = messageContent.length();
+
+        if (charactersLong <= 280) {
+            messages.add(message);
+        }
     }
 
     public ArrayList<Message> getMessages() {
-        return null;
+        return messages;
     }
 
 }
