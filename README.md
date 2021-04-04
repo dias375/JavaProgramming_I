@@ -4,5 +4,5 @@ Complete answers for the first of two parts of the [University of Helsinki's Jav
 
 
 ## Certificate:
-https://certificates.mooc.fi/validate/sztds6h52v
-![Certificate](certificate-java-programming-i.png)
+
+[![Certificate](certificate-java-programming-i.png)](https://certificates.mooc.fi/validate/sztds6h52v)
